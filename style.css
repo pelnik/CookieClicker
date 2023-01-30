@@ -2,6 +2,7 @@
 * {
   margin: 0px;
   border: solid 1px black;
+  border-radius: 5px;
 }
 
 
@@ -32,6 +33,16 @@
 
 #gameContent {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#clicker {
+  width: 100px;
+
 }
 
 #gameFooter {
@@ -45,6 +56,7 @@
   flex-direction: column;
   flex-wrap: nowrap;
   padding: 20px;
+  gap: 10px;
 }
 
 #sidebar h1 {
@@ -53,7 +65,7 @@
 }
 
 .sidebarEntry {
-  flex-basis: 200px;
+  flex-basis: 50px;
 }
 
 
