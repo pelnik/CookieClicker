@@ -1,1 +1,60 @@
 /* You will write the CSS rules for your Cookie Clicker game here! */
+* {
+  margin: 0px;
+  border: solid 1px black;
+}
+
+
+#fullWindow {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 0px;
+}
+
+#gamePage {
+  flex-basis: 500px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+#gameHeader {
+  flex-basis: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+#gameContent {
+  flex-grow: 1;
+}
+
+#gameFooter {
+  flex-basis: 100px;
+}
+
+
+#sidebar {
+  flex-basis: 400px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 20px;
+}
+
+#sidebar h1 {
+  align-self: center;
+  padding: 20px 0px;
+}
+
+.sidebarEntry {
+  flex-basis: 200px;
+}
+
+
+
