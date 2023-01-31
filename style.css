@@ -66,7 +66,35 @@
 
 .sidebarEntry {
   flex-basis: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 10px;
+  padding: 5px;
+  justify-content: flex-start;
 }
+
+.producerPicture {
+  width: 30px;
+}
+
+.producerText {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content:space-around;
+}
+
+.producerScore {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: xx-large;
+}
+
 
 
 
