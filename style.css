@@ -24,11 +24,31 @@
 }
 
 #gameHeader {
-  flex-basis: 100px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+#leftHeader {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#leftHeader img {
+  width: 36px;
+}
+
+#rightHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
 }
 
 #gameContent {
@@ -46,7 +66,30 @@
 }
 
 #gameFooter {
-  flex-basis: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items:flex-start;
+  background-color: #BF9E93;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#footerIconParent {
+  display: flex;
+  gap: 30px;
+}
+
+#footerIconParent a {
+  display: flex;
+  align-content: center;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footerIcon {
+  width: 40px;
 }
 
 
