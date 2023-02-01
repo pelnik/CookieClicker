@@ -61,7 +61,7 @@ function updateResource(evt) {
 
     producer.cost = Math.round(scaling * producer.cost,);
     producer.costElement.textContent = `Cost: ${producer.cost}`;
-    
+
     producer.bought += 1;
     producer.scoreElement.textContent = producer.bought;
   }
@@ -86,3 +86,23 @@ function updateResourceFromProducers() {
 }
 
 setInterval(updateResourceFromProducers, 1000);
+
+//Set up about age listeners
+
+function addAboutPageListeners() {
+  const aboutMainPage = document.querySelector('#rightHeader');
+  const aboutClosePage = document.querySelector('#closeAbout');
+
+  const aboutPage = document.querySelector('#aboutPage');
+
+  aboutMainPage.addEventListener('click', () => {
+    console.log(aboutMainPage.style.display)
+    aboutPage.style.display = 'flex';
+  })
+
+  aboutClosePage.addEventListener('click', () => {
+    aboutPage.style.display = 'none';
+  })
+}
+
+addAboutPageListeners();

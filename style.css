@@ -5,6 +5,16 @@
   border-radius: 5px;
 }
 
+* button {
+  color: inherit;
+  padding: 0px;
+  font-family: inherit;
+  background-color: inherit;
+  position:absolute;
+  top: 1%;
+  right: 1%;
+}
+
 
 #fullWindow {
   height: 100vh;
@@ -13,6 +23,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   padding: 0px;
+  position: relative;
 }
 
 #gamePage {
@@ -42,6 +53,7 @@
 
 #leftHeader img {
   width: 36px;
+  cursor: pointer;
 }
 
 #rightHeader {
@@ -49,6 +61,7 @@
   flex-direction: column;
   justify-content: center;
   padding: 5px;
+  cursor: pointer;
 }
 
 #gameContent {
@@ -138,6 +151,28 @@
   font-size: xx-large;
 }
 
+#aboutPage {
+  position: absolute;
+  height: 40%;
+  width: 40%;
+  top: 30%;
+  left: 30%;
+  z-index: 2;
+  background-color: white;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
 
+#closeAbout {
+  cursor: pointer;
+}
+
+#closeAbout img {
+  display: block;
+  width: 20px;
+  padding: 0px;
+}
 
 
