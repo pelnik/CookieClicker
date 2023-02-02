@@ -163,7 +163,19 @@
   gap: 10px;
   padding: 5px;
   justify-content: flex-start;
+  cursor: default;
 }
+
+.producerHidden {
+  display: none;
+}
+
+.producerCanBuy {
+  cursor: pointer;
+  padding: 0px;
+  border: solid 5px #90ADF5;
+}
+
 
 .producerPicture {
   width: 60px;
@@ -200,6 +212,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding: 20px;
+  border: solid 3px #F4B3A4;
 }
 
 #aboutText {

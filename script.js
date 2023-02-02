@@ -20,10 +20,35 @@ const producers = {
     yield: 20,
     bought: 0,
     cost: 200
-  } 
+  },
+  producer4: {
+    yield: 100,
+    bought: 0,
+    cost: 1000
+  },
+  producer5: {
+    yield: 500,
+    bought: 0,
+    cost: 4000
+  },
+  producer6: {
+    yield: 1500,
+    bought: 0,
+    cost: 12000
+  },
+  producer7: {
+    yield: 6000,
+    bought: 0,
+    cost: 36000
+  },
+  producer8: {
+    yield: 60000,
+    bought: 0,
+    cost: 60000
+  }
 }
 
-// Map IDs to resources bought ID so we don't query over and over
+// Map elments to object so we don't need toq uery constantly
 for (key in producers) {
   let producer = producers[key];
 
@@ -35,7 +60,7 @@ for (key in producers) {
   producer.scoreElement = score;
   producer.costElement = cost;
 }
-console.log(producers)
+
 
 function updateDomScore() {
   DOMScore.textContent = `Score: ${resource}`;
@@ -68,9 +93,22 @@ function updateResource(evt) {
 }
 
 for (let i = 0; i < queryProducers.length; i++) {
-  queryProducers[i].addEventListener('click', updateResource);
+  const producerElement = queryProducers[i];
+  producerElement.addEventListener('click', updateResource);
+
+
+  const producerID = producerElement.id;
+  producers[producerID].producerElement = producerElement;
+
 }
 
+
+// Interval for producer checks
+function producerIntervals() {
+  updateResourceFromProducers();
+  checkShowProducer();
+  checkBuyProducer();
+}
 
 function updateResourceFromProducers() {
   let resourcesToAdd = 0;
@@ -85,10 +123,43 @@ function updateResourceFromProducers() {
   updateDomScore();
 }
 
-setInterval(updateResourceFromProducers, 1000);
+const hiddenProducers = [...document.querySelectorAll('.producerHidden')];
 
-//Set up about age listeners
+function checkShowProducer() {
+  for (let i = 0; i < hiddenProducers.length; i++) {
+    let hiddenProducer = hiddenProducers[i];
+    let producerID = hiddenProducer.id;
+    let producerCost = producers[producerID].cost;
 
+
+    if (resource >= producerCost / 2) {
+      hiddenProducer.classList.remove('producerHidden');
+      hiddenProducers.splice(i, 1);
+      i--;
+    }
+  }
+}
+
+
+function checkBuyProducer() {
+  for (key in producers) {
+    let producer = producers[key];
+    let producerElementClasses = producer.producerElement.classList;
+    let containsCanBuy = producerElementClasses.contains('producerCanBuy');
+
+    if (resource >= producer.cost && !containsCanBuy) {
+      producerElementClasses.add('producerCanBuy');
+    } else if (resource < producer.cost && containsCanBuy) {
+      producerElementClasses.remove('producerCanBuy');
+    }
+  }
+}
+
+setInterval(producerIntervals, 100);
+
+
+
+//Set up about page listeners
 function addAboutPageListeners() {
   const aboutMainPage = document.querySelector('#rightHeader');
   const aboutClosePage = document.querySelector('#closeAbout');
@@ -96,7 +167,6 @@ function addAboutPageListeners() {
   const aboutPage = document.querySelector('#aboutPage');
 
   aboutMainPage.addEventListener('click', () => {
-    console.log(aboutMainPage.style.display)
     aboutPage.style.display = 'flex';
   })
 
@@ -106,3 +176,7 @@ function addAboutPageListeners() {
 }
 
 addAboutPageListeners();
+
+
+
+console.log(producers)
