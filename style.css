@@ -67,6 +67,12 @@
 #gameContent {
   flex-grow: 1;
   display: flex;
+  flex-direction: row;
+}
+
+#clickerScreen {
+  display: flex;
+  flex-grow: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -74,8 +80,7 @@
 }
 
 #clicker {
-  width: 100px;
-
+  width: 25%;
 }
 
 #gameFooter {
@@ -107,7 +112,7 @@
 
 
 #sidebar {
-  flex-basis: 400px;
+  flex-basis: 300px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -118,6 +123,8 @@
 #sidebar h1 {
   align-self: center;
   padding: 20px 0px;
+  font-size: medium;
+  text-align: center;
 }
 
 .sidebarEntry {
@@ -131,7 +138,7 @@
 }
 
 .producerPicture {
-  width: 30px;
+  width: 60px;
 }
 
 .producerText {

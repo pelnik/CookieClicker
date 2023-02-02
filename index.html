@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
     <script type="text/javascript" defer src="script.js"></script>
-    <title>My Cookie Clicker</title>
+    <title>Zoo Clicker by Matt Pelnik</title>
 </head>
 <body>
     <div id="fullWindow">
@@ -20,8 +20,46 @@
                 </div>
             </div>
             <div id="gameContent">
-                <p id="score">Score: 0</p>
-                <img src="Media/IMG_1285.jpeg" id='clicker' />
+                <div id="clickerScreen">
+                    <p id="score">Score: 0</p>
+                    <img src="Media/Animals/pig.svg" id='clicker' />
+                </div>
+                <div id="sidebar">
+                    <h1>Pick the animals below to generate more clicks</h1>
+                    <div class="sidebarEntry" id="producer1">
+                        <img class="producerPicture" src="Media/Animals/cat.svg" />
+                        <div class="producerText">
+                            <p>Producer 1</p>
+                            <p>1 per second</p>
+                            <p class="cost">Cost: 1</p>
+                        </div>
+                        <div class="producerScore">
+                            0
+                        </div>
+                    </div>
+                    <div class="sidebarEntry">
+                        <img class="producerPicture" src="Media/Animals/dog.svg" />
+                        <div class="producerText">
+                            <p>Producer 2</p>
+                            <p>5 per second</p>
+                            <p class="cost">Cost: 40</p>
+                        </div>
+                        <div class="producerScore">
+                            0
+                        </div>
+                    </div>
+                    <div class="sidebarEntry" id="producer3">
+                        <img class="producerPicture" src="Media/Animals/cow.svg" />
+                        <div class="producerText">
+                            <p>Producer 3</p>
+                            <p>20 per second</p>
+                            <p class="cost">Cost: 200</p>
+                        </div>
+                        <div class="producerScore" id="producer3Bought">
+                            0
+                        </div>
+                    </div>
+                </div>
             </div>
             <div id="gameFooter">
                 <div id="footerIconParent">
@@ -40,49 +78,14 @@
                 </div>
             </div>
         </div>
-        <div id="sidebar">
-            <h1>Choose your character!</h1>
-            <div class="sidebarEntry" id="producer1">
-                <img class="producerPicture" src="Media/IMG_1285.jpeg" />
-                <div class="producerText">
-                    <p>Producer 1</p>
-                    <p>1 per second</p>
-                    <p class="cost">Cost: 1</p>
-                </div>
-                <div class="producerScore">
-                    0
-                </div>
-            </div>
-            <div class="sidebarEntry">
-                <img class="producerPicture" src="Media/IMG_1285.jpeg" />
-                <div class="producerText">
-                    <p>Producer 2</p>
-                    <p>5 per second</p>
-                    <p class="cost">Cost: 40</p>
-                </div>
-                <div class="producerScore">
-                    0
-                </div>
-            </div>
-            <div class="sidebarEntry" id="producer3">
-                <img class="producerPicture" src="Media/IMG_1285.jpeg" />
-                <div class="producerText">
-                    <p>Producer 3</p>
-                    <p>20 per second</p>
-                    <p class="cost">Cost: 200</p>
-                </div>
-                <div class="producerScore" id="producer3Bought">
-                    0
-                </div>
-            </div>
-        </div>
         <div id="aboutPage">
             <button id="closeAbout">
                 <img src="Media/close.svg" />
             </button>
             <h1>About</h1>
             <p>This project was built from only HTML, CSS, and vanilla Javascript with no extra frameworks.</p>
-            <p>Credit for icons goes to: </p>
+            <p>Move up through progressively scarier animals by clicking the pig!</p>
+            <p>Icons used through attribute-only license from: kerismaker.com</p>
         </div>
     </div>
 </body>
