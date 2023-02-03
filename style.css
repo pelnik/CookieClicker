@@ -66,6 +66,12 @@
   cursor: pointer;
 }
 
+#leftHeader img:hover {
+  animation-name: shake;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+
 #middleHeader {
   color:#526BA8;
   font-size: x-large;
@@ -79,6 +85,12 @@
   cursor: pointer;
   background-color: #526BA8;
   color: white;
+}
+
+#rightHeader:hover {
+  animation-name: shake;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
 }
 
 
@@ -102,7 +114,17 @@
 #clicker {
   height: 15rem;
   cursor: pointer;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
 }
+
+#clicker:hover {
+  animation-name: shake;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+
+
 
 #gameFooter {
   display: flex;
@@ -128,6 +150,13 @@
   text-decoration: none;
   color: inherit;
 }
+
+#footerIconParent a:hover {
+  animation-name: shake;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+
 
 .footerIcon {
   width: 40px;
@@ -169,6 +198,7 @@
   cursor: default;
 }
 
+
 .producerHidden {
   display: none;
 }
@@ -177,6 +207,24 @@
   cursor: pointer;
   padding: 0px;
   border: solid 5px #90ADF5;
+  animation-name: shake;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(2deg);
+  }
+  30% {
+    transform: rotate(-2deg);
+  }
+  68% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 
@@ -268,7 +316,13 @@
     height: 7rem;
   }
 
+
   #middleHeader {
     font-size: medium;
+  }
+
+  @keyframes example {
+    from {translate: 0px 50vh}
+    to {translate: 0px}
   }
 }
