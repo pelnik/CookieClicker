@@ -176,7 +176,3 @@ function addAboutPageListeners() {
 }
 
 addAboutPageListeners();
-
-
-
-console.log(producers)
