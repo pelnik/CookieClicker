@@ -156,7 +156,7 @@ function checkBuyProducer() {
 
 setInterval(producerIntervals, 1000);
 // test interval
-setInterval(producerIntervals, 100);
+// setInterval(producerIntervals, 100);
 
 setInterval(checkBuyProducer,100);
 
