@@ -107,7 +107,6 @@ for (let i = 0; i < queryProducers.length; i++) {
 function producerIntervals() {
   updateResourceFromProducers();
   checkShowProducer();
-  checkBuyProducer();
 }
 
 function updateResourceFromProducers() {
@@ -156,7 +155,10 @@ function checkBuyProducer() {
 }
 
 setInterval(producerIntervals, 1000);
+// test interval
+setInterval(producerIntervals, 100);
 
+setInterval(checkBuyProducer,100);
 
 
 //Set up about page listeners
