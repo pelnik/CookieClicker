@@ -1,6 +1,7 @@
 /* You will write the CSS rules for your Cookie Clicker game here! */
 * {
   margin: 0px;
+  /* border: solid 1px black; */
   border-radius: 5px;
 }
 
@@ -216,6 +217,7 @@
   align-items: center;
   padding: 20px;
   border: solid 3px #F4B3A4;
+  box-shadow: 1px 2px 5px 1px black ;
 }
 
 #aboutText {
