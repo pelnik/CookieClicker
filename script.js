@@ -155,7 +155,7 @@ function checkBuyProducer() {
   }
 }
 
-setInterval(producerIntervals, 100);
+setInterval(producerIntervals, 1000);
 
 
 
