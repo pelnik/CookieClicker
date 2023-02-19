@@ -29,6 +29,7 @@
   padding: 0px;
   position: relative;
   overflow-y: auto;
+  touch-action: manipulation;
 }
 
 #gamePage {
